@@ -1,0 +1,352 @@
+// .template1     ====================================================================================================
+.template1 {
+  position: relative;
+  z-index: 1;
+
+  // .template1__container
+  &__container {
+  }
+
+  // .template1__body
+  &__body {
+    @include adaptiveValue("padding-right", 280, 0);
+  }
+
+  // .template1__title
+  &__title {
+    color: #992e2e;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 56, 32);
+    }
+  }
+
+  // .template1__text
+  &__text {
+  }
+
+  // .template1__bg
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 toRem(25) 0 0;
+    overflow: hidden;
+
+    img {
+      @include adaptiveValue("max-width", 275, 69);
+    }
+  }
+}
+
+// .template2     ====================================================================================================
+.template2 {
+  position: relative;
+  color: $White;
+  @include adaptiveValue("padding-top", 96, 88);
+  @include adaptiveValue("padding-bottom", 76, 84);
+
+  &::before {
+    content: "";
+    display: block;
+    width: toRem(98);
+    height: toRem(469);
+    background: url(../img/frame2-bg.png) no-repeat center/contain;
+    position: absolute;
+    bottom: toRem(36);
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  // .template2__bg
+  &__bg {
+    img {
+      object-position: top;
+    }
+  }
+
+  // .template2__body
+  &__body {
+    position: relative;
+    z-index: 1;
+  }
+
+  // .template2__heading
+  &__heading {
+    text-align: center;
+    display: grid;
+    align-content: flex-start;
+    row-gap: toRem(12);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(24);
+
+      @media (max-width: $mobileSmall) {
+        margin-bottom: toRem(60);
+      }
+    }
+  }
+
+  // .template2__title
+  &__title {
+  }
+
+  // .template2__subtitle
+  &__subtitle {
+  }
+
+  // .template2__image
+  &__image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      @media (max-width: $mobileSmall) {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  & + .template3 {
+    margin-top: toRem(-36);
+  }
+}
+
+// .template3     ====================================================================================================
+.template3 {
+  position: relative;
+  color: $White;
+  padding-top: toRem(104);
+
+  // .template3__bg
+  &__bg {
+    img {
+      object-position: top;
+    }
+  }
+
+  // .template3__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  // .template3__content
+  &__content {
+    h1,
+    h2 {
+      @include adaptiveValue("font-size", 34, 30);
+    }
+  }
+}
+
+// .template4     ====================================================================================================
+.template4 {
+  // .template4__container
+  &__container {
+    // max-width: toRem(600);
+  }
+
+  // .template4__row
+  &__row {
+    @media (min-width: $mobile) {
+      display: flex;
+      align-items: flex-start;
+      @include adaptiveValue("column-gap", 64, 44, 0, 1600, 768);
+    }
+    @media (max-width: $mobile) {
+      display: grid;
+      align-content: flex-start;
+      justify-content: center;
+      justify-items: center;
+      gap: toRem(60);
+    }
+  }
+
+  // .template4__left
+  &__left {
+  }
+
+  // .template4__avatar
+  &__avatar {
+  }
+
+  // .template4__body
+  &__body {
+  }
+
+  // .template4__title
+  &__title {
+    color: #d86f2f;
+
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+
+  // .template4__text
+  &__text {
+  }
+
+  // .template4__audio
+  &__audio {
+    &:not(:first-child) {
+      margin-top: toRem(40);
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.avatar {
+  display: inline-flex;
+  position: relative;
+
+  // .avatar__ellipse
+  &__ellipse {
+    display: block;
+    width: toRem(220);
+    height: toRem(220);
+    flex: 0 0 toRem(220);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    // .avatar__ellipse_1
+    &_1 {
+      background: linear-gradient(231deg, #ed7c36 0%, #eb663d 100%);
+      transform: translate(calc(-50% + toRem(7.5)), calc(-50% + toRem(5)));
+    }
+
+    // .avatar__ellipse_2
+    &_2 {
+      background: linear-gradient(180deg, #dd504c 0%, #aa282a 100%);
+      transform: translate(calc(-50% + toRem(7.5)), calc(-50% - toRem(5)));
+    }
+
+    // .avatar__ellipse_3
+    &_3 {
+      background: linear-gradient(360deg, #3d9cb2 0%, #296978 100%);
+      transform: translate(calc(-50% + toRem(-6)), calc(-50% - toRem(5)));
+    }
+  }
+
+  // .avatar__ornament
+  &__ornament {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-29%, 24%);
+    z-index: 1;
+  }
+
+  // .avatar__img
+  &__img {
+    flex: 0 0 toRem(213);
+    width: toRem(213);
+    height: toRem(213);
+    border: toRem(8) solid #ede4df;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+// .template5     ====================================================================================================
+.template5 {
+  position: relative;
+  padding-top: toRem(38);
+  padding-bottom: toRem(96);
+
+  // .template5__bg
+  &__bg {
+  }
+
+  // .template5__container
+  &__container {
+  }
+
+  // .template5__wrapper
+  &__wrapper {
+    position: relative;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
+    background-color: $White;
+    border-radius: toRem(30);
+    max-width: toRem(330);
+    margin-left: auto;
+    padding: toRem(36) toRem(44);
+    @include adaptiveValue("padding-left", 36, 36);
+    @include adaptiveValue("padding-right", 36, 36);
+  }
+
+  // .template5__title
+  &__title {
+    font-size: toRem(30);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(24);
+    }
+  }
+
+  // .template5__text
+  &__text {
+    font-size: toRem(14);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(32);
+    }
+  }
+
+  // .template5__footer
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: toRem(18);
+  }
+
+  // .template5__pic
+  &__pic {
+  }
+
+  // .template5__button
+  &__button {
+    flex: 1;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+// .template6     ====================================================================================================
+.template6 {
+  position: relative;
+  z-index: 1;
+  background-color: $White;
+
+  // .template6__container
+  &__container {
+  }
+
+  // .template6__content
+  &__content {
+  }
+}
+//====================================================================================================

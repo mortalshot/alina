@@ -353,7 +353,7 @@ video {
   display: block;
   width: 6.125rem;
   height: 29.3125rem;
-  background: url(../img/frame2-bg.webp) no-repeat center/contain;
+  background: url(../img/frame2-bg.png) no-repeat center/contain;
   position: absolute;
   bottom: 2.25rem;
   left: 0;
@@ -642,7 +642,7 @@ video {
     display: block;
     width: 25.6875rem;
     height: 29.125rem;
-    background: url(../img/frame6-bg.webp) no-repeat center/contain;
+    background: url(../img/frame6-bg.png) no-repeat center/contain;
     position: absolute;
     bottom: -7.5rem;
     right: -6.375rem

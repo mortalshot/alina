@@ -672,6 +672,9 @@ video {
     -webkit-transform: scale(1.15);
     transform: scale(1.15)
   }
+  .template2 + .template3 {
+    margin-top: -2.625rem
+  }
 }
 @media (max-width:23.75em) {
   body {

@@ -109,6 +109,10 @@
 
   & + .template3 {
     margin-top: toRem(-36);
+
+    @media (max-width: $mobileSmall) {
+      margin-top: toRem(-42);
+    }
   }
 }
 

@@ -56,6 +56,10 @@
     bottom: toRem(36);
     left: 0;
     transform: translateX(-100%);
+
+    @media (min-resolution: 2dppx) {
+      background: url(../img/frame2-bg@2x.png) no-repeat center/contain;
+    }
   }
 
   // .template2__bg
@@ -303,15 +307,22 @@
   // .template5__title
   &__title {
     font-size: toRem(30);
+    color: #294050;
 
     &:not(:last-child) {
       margin-bottom: toRem(24);
+    }
+
+    span {
+      color: #da9212;
+      text-transform: uppercase;
     }
   }
 
   // .template5__text
   &__text {
     font-size: toRem(14);
+    color: #3e3e3e;
 
     &:not(:last-child) {
       margin-bottom: toRem(32);
@@ -344,6 +355,7 @@
   position: relative;
   z-index: 1;
   background-color: $White;
+  color: #222;
 
   // .template6__container
   &__container {

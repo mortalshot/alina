@@ -20,6 +20,7 @@
 $fontFamily: "Muller";
 $fontSecond: "PlayfairDisplay";
 $fontThird: "FiraSans";
+$fontFourth: "OpenSansCondensed";
 $fontSize: toRem(16); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
@@ -111,6 +112,10 @@ body {
 					position: absolute;
 					bottom: toRem(-120);
 					right: toRem(-102);
+
+					@media (min-resolution: 2dppx) {
+						background: url(../img/frame6-bg@2x.png) no-repeat center/contain;
+					}
 				}
 			}
 

@@ -6,6 +6,13 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: PlayfairDisplay;
+	font-display: swap;
+	src: url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
 	font-family: Muller;
 	font-display: swap;
 	src: url("../fonts/Muller-Light.woff2") format("woff2");
@@ -13,9 +20,9 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: PlayfairDisplay;
+	font-family: OpenSansCondensed;
 	font-display: swap;
-	src: url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2");
-	font-weight: 600;
+	src: url("../fonts/OpenSansCondensed-Bold.woff2") format("woff2");
+	font-weight: 700;
 	font-style: normal;
 }
